@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { ICarouselItem } from '../data/interfaces/icarousel-item.metadata';
+import { MenuService } from '../service/menu.service';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-carousel',
@@ -10,9 +12,11 @@ export class CarouselComponent {
     /**
     * Custom Properties
   */
-    @Input() height = 500;
+    @Input() height = 800;
     @Input() isFullScreen = false;
     @Input() items: ICarouselItem[] = [];
+    @Input() autoSlide = false;
+    @Input() slideInternal = 6000;
   
     /**
      * Final Properties
@@ -20,7 +24,8 @@ export class CarouselComponent {
     public finalHeight: string | number = 0;
     public currentPosition = 0;
   
-    constructor() {
+    constructor( private menuService: MenuService) {
+      this.menuService.loadScript();
       this.finalHeight = this.isFullScreen ? '100vh' : `${this.height}px`;
      }
   
@@ -28,12 +33,19 @@ export class CarouselComponent {
       this.items.map( ( i, index ) => {
         i.id = index;
         i.marginLeft = 0;
+        i.width = 10;
       });
+      if(this.autoSlide)
+      {
+        this.autoSlideImages();
+      }
+      AOS.init()
+      window.addEventListener('load', AOS.refresh)
     }
   
     setCurrentPosition(position: number) {
       this.currentPosition = position;
-      this.items.find((i) => i.id === 0)!.marginLeft = -100*position;      
+      this.items.find((i) => i.id === 0)!.marginLeft = position;      
     }
   
     setNext() {
@@ -58,6 +70,12 @@ export class CarouselComponent {
         finalPercentage = -100 * backPosition;
       }
       this.items.find((i) => i.id === 0)!.marginLeft = finalPercentage;
-      this.currentPosition = backPosition;  
+      this.currentPosition = backPosition;
+    }
+
+    autoSlideImages() {
+      setInterval(() => {
+        this.setNext();
+      }, this.slideInternal)
     }
 }

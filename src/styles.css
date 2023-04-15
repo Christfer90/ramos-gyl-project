@@ -1,18 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
 
-*
-{
+/*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-:root
-{
-    --primary-color:#3FC060;
-    --secondary-color:#162328;
+
+html {
+    scroll-behavior: smooth;
 }
-body
-{
-    height: 100vh;
+
+body {
     font-family: 'Cormorant Garamond', serif;
+}
+
+h1,
+h2,
+h3,
+p {
+    line-height: 140%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
 }

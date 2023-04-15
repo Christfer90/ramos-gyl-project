@@ -35,6 +35,6 @@ export const CAROUSEL_DATA_ITEMS: ICarouselItem[] = [
         title2: '',
         subtitle: 'Disfruta de nuestro estilo de trabajo con shows exclusivos ',
         link: '/',
-        image: 'assets/img/rgp16.jpg'
+        image: 'assets/img/rgp18.jpg'
     }
 ];

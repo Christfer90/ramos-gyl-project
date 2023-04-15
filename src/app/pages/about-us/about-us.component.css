@@ -1,0 +1,83 @@
+.about-us {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.about-us .row
+{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+}
+
+.about-us .row .img-container
+{
+    flex: 1 1 40rem;
+    position: relative;
+}
+
+.about-us .row .img-container img
+{
+    width: 100%;
+    border: 1,5rem solid #fff;
+    border-radius: .5rem;
+    box-sizing: 0 .5rem 1rem rgba(0,0,0,1);
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-us .row .img-container h3
+{
+    position: absolute;
+    top: 50%; transform: translateY(-50%);
+    font-size: 3rem;
+    background: #fff;
+    width: 100%;
+    padding: 1rem 2rem;
+    text-align: center;
+    mix-blend-mode: screen;
+    
+}
+
+.about-us .row .content
+{
+    flex: 1 1 40rem;
+}
+
+.about-us .row .content p
+{
+    text-align: justify;
+    font-size: 1.3rem;
+}
+
+.about-us .row .content h3
+{
+    font-size: 2rem;
+}
+.about-us h1
+{
+    font-size: 50px;
+    font-weight: 300;
+}
+
+.btn
+{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #333;
+    color: #fff;
+    padding: .5rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.btn:hover
+{
+    background: #616161;
+}

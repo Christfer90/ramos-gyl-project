@@ -1,5 +1,17 @@
-.rg-skeleton-content
+/* .rg-skeleton-content
 {
-    min-height: calc(100vh - 80px - 60px);
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     background: rgb(0,0,0,0.15);
+    background-position: center;
+    background-size: cover;
 }
+
+.skeleton-content
+{
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+} */

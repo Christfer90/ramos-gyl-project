@@ -9,4 +9,5 @@ export interface ICarouselItem
     image: string;
     order?: number;
     marginLeft?: number;
+    width?: number;
 }

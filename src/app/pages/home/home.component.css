@@ -71,85 +71,230 @@
   text-align: center;
   font-size: 1.5em;
 }*/
+.more-info
+{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.more-info h1
+{
+  font-size: 48px;
+  font-weight: 300;
+  color: whitesmoke;
+}
+
+.more-info p
+{
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+
+.info-row
+{
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-col
+{
+  flex-basis: 31%;
+  background: #fff3f3;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+}
+
+h3
+{
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+/* Coctelería */
+
+.our-coctel
+{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;  
+}
+
+.our-coctel h1
+{
+  font-size: 48px;
+  font-weight: 300;
+  color: whitesmoke;
+}
+
+.our-coctel p
+{
+  color: #777;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+
+.row-coctel
+{
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.coctel-col
+{
+  flex-basis: 32%;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.coctel-col img
+{
+  width: 100%;
+  display: block;
+}
+
+.name-coctel
+{ 
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+.name-coctel:hover
+{
+  background-color: rgba(225, 225, 225, 0.5);
+}
+
+.name-coctel h3
+{
+  width: 100%;
+  font-weight: 800;
+  font-size: 36px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.name-coctel:hover h3
+{
+  bottom: 49%;
+  opacity: 1;
+}
+
+/* nuestros clientes */
+
+.our-costumers
+{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px; 
+}
+
+.our-costumers h1
+{
+  font-size: 48px;
+  font-weight: 300;
+  color: whitesmoke;
+}
+
+.our-costumers p
+{
+  color: #777;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+
+.row-costumers
+{
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.costumers-col
+{
+  flex-basis: 44%;
+  border-radius: 5px;
+  margin-bottom: 5%;
+  text-align: left;
+  background: #fff3f3;
+  padding: 25px;
+  display: flex;
+  cursor: pointer;
+}
+
+.costumers-col img
+{
+  height: 50px;
+  margin-left: 5px;
+  margin-right: 30px;
+  border-radius: 50%;
+}
+
+.costumers-col p
+{
+  padding: 0;
+}
+
+.costumers-col h3
+{
+  margin-top: 15px;
+  text-align: left;
+}
+
+.costumers-col .fa
+{
+  color: #f44636;
+}
+
+.footer
+{
+  width: 100%;
+  margin: auto;
+}
 
 /*********************************************
               PRUEBA
 *********************************************/
 
-#about-us
-{   display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 20px;
-    padding: 80px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "tile-1 tile-1 tile-1 tile-2 tile-2 tile-2 tile-3 tile-3 tile-3"
-      "tile-1 tile-1 tile-1 tile-2 tile-2 tile-2 tile-3 tile-3 tile-3";
-  }
-
-  #about-us .tile
+  .rg-info
   {
-    padding: 40px;
-    box-sizing: border-box;
-    overflow: hidden;
-    opacity: 0.5;
-    transition: all 0.1s ease-in;
-  }
-
-  #about-us .tile:hover
-  {
-    transform: scale(0.99);
-    opacity: 1;
-  }
-
-  .tile-1 
-  { 
-    grid-area: tile-1;
-    background-image: url("/assets/img/rgp11.jpg");
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .tile-2 
-  { 
-    grid-area: tile-2; 
-    background-image: url("/assets/img/rgp12.jpg");
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .tile-3 
-  { 
-    grid-area: tile-3;
-    background-image: url("/assets/img/rgp13.jpg");
-    background-size: cover;
-    background-position: center;
-  }
-
-  #about-us .rg-btn
-  {
-    position: relative;
-    background-color: #eee;
-    align-items: center;
-    justify-content: center;
-  }
-
-  #rg-info
-  {
-    background-image: url('/assets/img/rgp18.jpg');
+    background-image: url('/assets/img/rgp16.jpg');
     height: 800px;
-    width: 100%;
+    width: 80%;
+    margin: auto;
     background-position: center top;
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #eee;
+    color: #616161;
     opacity: 0.5;
   }
 
-  #rg-info:hover
+  .rg-info:hover
   {
     opacity: 1;
   }
@@ -191,7 +336,7 @@
 
   .ctn
   {
-    padding: 9px 30px;
+    padding: 15px 40px;
     background-color: transparent;
     border: 1px solid;
     color: whitesmoke;
@@ -202,9 +347,41 @@
   {
     background: #bba887;
     transform: scale(1.99);
-    opacity: 1;
-    
+    opacity: 1;    
   }
+
+  /* Mobile */
+
+  @media only screen and (max-width:900px)
+  {
+    .info-row
+    {
+      flex-direction: column;
+    }
+
+    .row-coctel
+    {
+      flex-direction: column;
+    }
+  }
+
+  @media only screen and (max-width:700px)
+  {
+
+    .row-costumers
+    {
+      flex-direction: column;
+    }
+
+    .costumers-col img
+    {
+      flex-direction: column;
+      margin-left: 0px;
+      margin-right: 15px;
+    }
+
+  }
+  
 
 
 
